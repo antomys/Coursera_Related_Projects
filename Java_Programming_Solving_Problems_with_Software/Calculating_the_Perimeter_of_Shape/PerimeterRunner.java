@@ -1,5 +1,3 @@
-package com.company;
-
 import edu.duke.*;
 
 import java.io.File;
@@ -22,7 +20,6 @@ public class PerimeterRunner {
         }
         return i;
     }
-
     public void testPerimeter(){
         FileResource fileResource = new FileResource();
         Shape shape = new Shape(fileResource);
