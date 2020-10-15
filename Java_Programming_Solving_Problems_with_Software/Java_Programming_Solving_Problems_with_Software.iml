@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+<module type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Calculating_the_Perimeter_of_Shape" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Finding_a_Gene_in_DNA" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CSV_Data_Comma_Separated_Values" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Baby Names MiniProject" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
