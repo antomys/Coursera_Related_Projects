@@ -5,7 +5,8 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/Java_Programming_Solving_Problems_with_Software/pom.xml" />
-        <option value="$PROJECT_DIR$/Object Oriented Programming in Java/pom.xml" />
+        <option value="$PROJECT_DIR$/Object Oriented Programming/pom.xml" />
+        <option value="$PROJECT_DIR$/Java Programming Arrays, Lists, and Structured Data/pom.xml" />
       </list>
     </option>
   </component>

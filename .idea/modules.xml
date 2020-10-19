@@ -5,8 +5,10 @@
       <module fileurl="file://$PROJECT_DIR$/AlgorithmsPartI/AlgorithmsPartI.iml" filepath="$PROJECT_DIR$/AlgorithmsPartI/AlgorithmsPartI.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java_Programming_Solving_Problems_with_Software/CSV_Data_Comma_Separated_Values.iml" filepath="$PROJECT_DIR$/Java_Programming_Solving_Problems_with_Software/CSV_Data_Comma_Separated_Values.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Coursera_Related_Projects.iml" filepath="$PROJECT_DIR$/.idea/Coursera_Related_Projects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java Programming Arrays, Lists, and Structured Data/Java Programming Arrays, Lists, and Structured Data.iml" filepath="$PROJECT_DIR$/Java Programming Arrays, Lists, and Structured Data/Java Programming Arrays, Lists, and Structured Data.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java_Programming_Solving_Problems_with_Software/Java_Programming_Solving_Problems_with_Software.iml" filepath="$PROJECT_DIR$/Java_Programming_Solving_Problems_with_Software/Java_Programming_Solving_Problems_with_Software.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Object Oriented Programming in Java/Object Oriented Programming in Java.iml" filepath="$PROJECT_DIR$/Object Oriented Programming in Java/Object Oriented Programming in Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Object Oriented Programming/Object Oriented Programming.iml" filepath="$PROJECT_DIR$/Object Oriented Programming/Object Oriented Programming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Quizful/Quizful.iml" filepath="$PROJECT_DIR$/Quizful/Quizful.iml" />
     </modules>
   </component>
 </project>

@@ -7,13 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Coursera_Related_Projects" />
-        <module name="Object Oriented Programming in Java" />
+        <module name="Java Programming Arrays, Lists, and Structured Data" />
+        <module name="Object Oriented Programming" />
         <module name="Java_Programming_Solving_Problems_with_Software" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Coursera_Related_Projects" target="1.5" />
+      <module name="Java Programming Arrays, Lists, and Structured Data" target="1.5" />
       <module name="Java_Programming_Solving_Problems_with_Software" target="1.5" />
+      <module name="Object Oriented Programming" target="1.5" />
       <module name="Object Oriented Programming in Java" target="1.5" />
     </bytecodeTargetLevel>
   </component>
