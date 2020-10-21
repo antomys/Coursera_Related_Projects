@@ -234,3 +234,113 @@ class App1 {
 //при i = 6 символ вставляется в 5-ю позицию; получаем b = "12345,678,910", b.length() = 13
 //при i = 9 символ вставляется во 2-ю позицию; получаем b = "12,345,678,910", b.length() = 14
 //при i = 12 цикл продолжает выполняться (ведь 12 < 14), происходит попытка вставить символ в -1-ю позицию - и тут выбрасывается exception
+
+class Tasks {
+    public static Tasks instance = new Tasks();
+    private static final int DELTA = 5;
+    private static int BASE = 7;
+    private int x;
+
+    public Tasks() {
+        x = BASE + DELTA;
+    }
+    public static int getBASE() {
+        return BASE;
+    }
+    public static void main(String[] args) {
+        System.out.println(Tasks.instance.x);
+    }
+}
+///Пояснение: Инициализация статических полей осуществляется в том порядке, в котором они записаны.
+//В этом примере первым будет проинициализировано поле instance, а уже затем - BASE. Поэтому в момент вызова конструктора Tasks() поле BASE ещё содержит 0.
+//Поле DELTA является переменной-константой, поэтому компилятор сразу подставляет в выражение вместо DELTA его значение.
+//В итоге получаем: x = 0 + 5;
+
+public class Test {
+    public static void main(String[] args){
+        int[][] x  = new int[2][5];
+        int[][] y = new int[2][5];
+        System.out.println(x[1][3]);
+        System.arraycopy(x, 0, y, 0, x.length);
+        x[1][3] = 55;
+        System.out.println(y[1][3]);
+    }
+}
+/// 0 55
+///Пояснение: Любой N-мерный массив это одномерный массив, элементами которого являются >>ссылки<< на массивы размерности N-1.
+//System.arraycopy копирует как раз эти ссылки.
+
+class ClassA {
+    int x = 1;
+
+    public void printX() {
+        System.out.println(getX());
+    }
+
+    public int getX() {
+        return x;
+    }
+}
+
+class ClassB extends ClassA {
+    int x = 2;
+
+    public int getX() {
+        return x + 1;
+    }
+}
+
+class Test55 {
+    public static void main(String[] args) {
+        ClassA a = new ClassB();
+        System.out.println(a.x);
+    }
+}
+///1
+///Пояснение: Правильный ответ 1. Поскольку тип переменной является класс ClassA,
+// то переменные этого класса перекрывают переменные класса ClassB при вызове этой переменной через ссылку с типом ClassA
+
+class VerySimpleClass {
+    public static void main(String... args) {
+        for (byte i = 6, j = 0 ; (j += i++) <= 10; i >>= 1, System.out.print(--j));
+    }
+}
+///Пояснение: Программа нормально компилируется, т.к. синтаксически такая форма цикла for вполне корректна и не содержит ошибок.
+// Однако при запуске программа уйдет в бесконечный цикл, т.к. после трех итераций значение переменной j перестанет возрастать
+// и в точке контроля условия цикла переменная j всегда будет равна 9.
+
+class V {
+    String s = null;
+    V(String str){
+        this.s = str;
+    }
+}
+
+class MyTest {
+    public static void main(String[] args) {
+        V v1 = new V("abc");
+        V v2 = new V("abc");
+
+        System.out.println((v1 == v2) + " " + v1.equals(v2));
+    }
+}
+
+///false false
+///Пояснение: метод equals() по умолчанию сравнивает ссылки, так же как и ==. Для "правильного" сравнения объектов, метод необходимо переопределить.
+//
+//@Override
+//public boolean equals(Object obj) {
+//    return s.equals(((V)obj).s);
+//}
+class Ttttt {
+    public static void main(String[] args) {
+        int x = 0;
+        System.out.print(x++==++x);
+    }
+}
+
+/// false
+///Пояснение: - сначала будет взято значение x и запомнено как левая часть выражения (т.е. 0)
+//- потом будет произведён пост-инкремент (т.е. x примет значение 1)
+//- потом выполнится пре-инкремент (т.е. x примет значение 2)
+//- и только теперь будет взято значение для правого операнда операции сравнения (т.е. 2), таким образом получаем сравнение "0 == 2".
