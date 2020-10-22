@@ -256,7 +256,7 @@ class Tasks {
 //Поле DELTA является переменной-константой, поэтому компилятор сразу подставляет в выражение вместо DELTA его значение.
 //В итоге получаем: x = 0 + 5;
 
-public class Test {
+class Testzzzzz {
     public static void main(String[] args){
         int[][] x  = new int[2][5];
         int[][] y = new int[2][5];

@@ -104,12 +104,6 @@ class CaesarCipher {
             System.out.println(decrypted);
         }
     }
-
-    public static void main(String[] args) throws Exception {
-            testCaesar();
-        //testCountWordLengths();
-    }
-
     public static void testCountWordLengths() throws IOException {
         Scanner scanner= new Scanner(new File("Java Programming Arrays, " +
                 "Lists, and Structured Data/test.txt"));
@@ -153,6 +147,7 @@ class WordLengths extends CaesarCipher {
         if (maxDex < 4) {
             dKey = 26 - (4 - maxDex);
         }
+        System.out.println("dkey " +dKey + " returned " + (26-dKey));
         return encrypt(input,26-dKey);
     }
     private void decryptCycle(StringBuilder decrypted, String alphabet, int[] counts) {
@@ -179,17 +174,17 @@ class WordLengths extends CaesarCipher {
     }
 
     public int countLetters(int[]counts) {
-        int maxIndex = 0;
-        int maxIdx = 0;
+        int maxDex = 0;
+        //int maxIdx = 0;
         for (int i = 0 ; i< counts.length ; i++) {
-            if (counts[i] > maxIdx) {
-                maxIdx = counts[i];
-                maxIndex=i;
+            if (counts[i] > counts[maxDex]) {
+                maxDex = i;
+                //maxIndex=i;
             }
             //char Z = (char)(65+i);
             //System.out.println(Z + " counted " + counts[i]);
         }
-        return maxIndex;
+        return maxDex;
     }
 
     public String decryptTwoKeys (String input) {
@@ -211,5 +206,9 @@ class WordLengths extends CaesarCipher {
         System.out.println(key1+" "+key2);
         return encryptTwoKeys(input, key1, key2);
     }
-
+    public static void main(String[] args) throws Exception {
+        //testCaesar();
+        //testCountWordLengths();
+        testCountWordLengths();
+    }
 }
