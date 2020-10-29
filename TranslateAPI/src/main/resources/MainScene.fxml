@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="5.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainSceneController">
+   <children>
+      <VBox prefHeight="352.0" prefWidth="600.0">
+         <children>
+            <HBox prefHeight="346.0" prefWidth="600.0" spacing="10.0">
+               <children>
+                  <TextArea fx:id="initTextArea" prefHeight="200.0" prefWidth="295.0" />
+                  <TextArea fx:id="procTextArea" prefHeight="200.0" prefWidth="295.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox prefHeight="42.0" prefWidth="600.0" spacing="100.0">
+         <children>
+            <ChoiceBox fx:id="langChoiceBox" prefHeight="25.0" prefWidth="294.0" />
+            <Button mnemonicParsing="false" onAction="#process" prefHeight="25.0" prefWidth="192.0" text="Button" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

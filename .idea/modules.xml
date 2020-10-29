@@ -7,8 +7,11 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/Coursera_Related_Projects.iml" filepath="$PROJECT_DIR$/.idea/Coursera_Related_Projects.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java Programming Arrays, Lists, and Structured Data/Java Programming Arrays, Lists, and Structured Data.iml" filepath="$PROJECT_DIR$/Java Programming Arrays, Lists, and Structured Data/Java Programming Arrays, Lists, and Structured Data.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java_Programming_Solving_Problems_with_Software/Java_Programming_Solving_Problems_with_Software.iml" filepath="$PROJECT_DIR$/Java_Programming_Solving_Problems_with_Software/Java_Programming_Solving_Problems_with_Software.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Object Oriented Programming/Object Oriented Programming.iml" filepath="$PROJECT_DIR$/Object Oriented Programming/Object Oriented Programming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOPJava/MapsProject.iml" filepath="$PROJECT_DIR$/OOPJava/MapsProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOPJava/OOPJava.iml" filepath="$PROJECT_DIR$/OOPJava/OOPJava.iml" />
       <module fileurl="file://$PROJECT_DIR$/Quizful/Quizful.iml" filepath="$PROJECT_DIR$/Quizful/Quizful.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Theory_Of_Choosing/Theory_Of_Choosing.iml" filepath="$PROJECT_DIR$/Theory_Of_Choosing/Theory_Of_Choosing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TranslateAPI/TranslateAPI.iml" filepath="$PROJECT_DIR$/TranslateAPI/TranslateAPI.iml" />
     </modules>
   </component>
 </project>
