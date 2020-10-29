@@ -51,7 +51,7 @@ public class MainSceneController implements Initializable {
                 Arrays.asList(initTextArea.getText().split("\n")), (String) langChoiceBox.getValue()
         );
 
-        list.setKey("AIzaSyCnJ6oyAkMUZaPQYXwE6TfLi7QRHwKbjDE");
+        list.setKey(""); //TODO: API KEY
         TranslationsListResponse response = list.execute();
         for (TranslationsResource translationsResource : response.getTranslations())
         {
