@@ -23,12 +23,7 @@ import javafx.scene.control.TextArea;
 
 public class MainSceneController implements Initializable {
     ObservableList<String> langs = FXCollections.observableArrayList(
-            "af", "sq", "ar", "hy", "az", "eu", "be", "bn", "bs", "bg", "ca", "ceb", "ny", "zh-TW", "hr",
-            "cs", "da", "nl", "en", "eo", "et", "tl", "fi", "fr", "gl", "ka", "de", "el", "gu", "ht", "ha",
-            "iw", "hi", "hmn", "hu", "is", "ig", "id", "ga", "it", "ja", "jw", "kn", "kk", "km", "ko", "lo",
-            "la", "lv", "lt", "mk", "mg", "ms", "ml", "mt", "mi", "mr", "mn", "my", "ne", "no", "fa", "pl",
-            "pt", "ro", "ru", "sr", "st", "si", "sk", "sl", "so", "es", "su", "sw", "sv", "tg", "ta", "te",
-            "th", "tr", "uk", "ur", "uz", "vi", "cy", "yi", "yo", "zu");
+            "RU","de","zh","EN","UK", "ceb");
     @FXML ChoiceBox langChoiceBox;
     @FXML
     TextArea initTextArea;
@@ -41,14 +36,16 @@ public class MainSceneController implements Initializable {
 
 
 
-    public void process(ActionEvent actionEvent) throws GeneralSecurityException, IOException {
+    public void process() throws GeneralSecurityException, IOException {
         Translate translate= new Translate.Builder(
                 GoogleNetHttpTransport.newTrustedTransport()
                 , GsonFactory.getDefaultInstance(), null)
                 .setApplicationName("DemoTranslateAPI")
                 .build();
+        procTextArea.setWrapText(true);
+        initTextArea.setWrapText(true);
         Translate.Translations.List list = translate.new Translations().list(
-                Arrays.asList(initTextArea.getText().split("\n")), (String) langChoiceBox.getValue()
+                Arrays.asList(initTextArea.getText()), (String) langChoiceBox.getValue()
         );
 
         list.setKey(""); //TODO: API KEY
