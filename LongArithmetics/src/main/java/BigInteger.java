@@ -2,7 +2,7 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.*;
 
-class BigInteger implements IBigInteger {
+class BigInteger  {
     private List<Integer> number;
 
     public BigInteger (String number) {
@@ -14,7 +14,7 @@ class BigInteger implements IBigInteger {
         for (int numbs : array) {
             number.add(numbs);
         }
-        this.number = number;
+        this.number = normalize(number);
     }
 
     private List<Integer> convertToList(String input) {
@@ -47,7 +47,7 @@ class BigInteger implements IBigInteger {
 
     @Override
     public String toString(){
-        this.number = normalize(this.number);
+        //this.number = normalize(this.number);
         StringBuilder output = new StringBuilder();
         for (Integer i : this.number) {
             output.append(i);
@@ -57,7 +57,6 @@ class BigInteger implements IBigInteger {
 
     public BigInteger add(BigInteger secondNumber) {
         BigInteger firstNumber = this;
-        //BigInteger secondNumber = secNum;
         int maxLength = Math.max(firstNumber.number.size(), secondNumber.number.size());
         int[] output = new int[maxLength + 1];
         int difference = Math.abs(firstNumber.number.size() - secondNumber.number.size());
@@ -67,17 +66,14 @@ class BigInteger implements IBigInteger {
             }
         } else {
             for (int i = 0; i < difference; i++) {
-                firstNumber.number.add(i,0);
+                firstNumber.number.add(0,0);
             }
         }
         for (int i = 0; i < maxLength ; i++) {
             int sum = (firstNumber.number.get(i) + secondNumber.number.get(i) + output[i + 1]);
             if (sum < 10) {
-                    //output.set(i, sum);
                 output[i + 1] = sum;
             } else {
-                    //output.set(i, sum % 10);
-                    //output.set(i - 1, sum / 10);
                 output[i + 1] = sum % 10;
                 output[i] += sum / 10;
             }
