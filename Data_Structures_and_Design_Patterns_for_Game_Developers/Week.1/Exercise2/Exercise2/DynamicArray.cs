@@ -9,22 +9,21 @@ namespace Exercise2
     {
         private const int ExpandMultiplyFactor = 2;
         protected T[] Items;
-        protected int count;
-        
+
 
         /// <summary>
         /// Constructor
         /// </summary>
         protected DynamicArray()
         {
+            Count = 0;
             Items = new T[4];
-            count = 0;
         }
         
         /// <summary>
         /// Gets the number of elements
         /// </summary>
-        public int Count => count;
+        protected int Count { get; set; }
         
         public abstract void Add(T item);
         public abstract bool Remove(T item);
@@ -35,7 +34,7 @@ namespace Exercise2
         /// </summary>
         public void Clear()
         {
-            count = 0;
+            Count = 0;
         }
 
         /// <summary>
@@ -45,10 +44,10 @@ namespace Exercise2
         public override string ToString()
         {
             var builder = new StringBuilder();
-            for (var i = 0; i < count; i++)
+            for (var i = 0; i < Count; i++)
             {
                 builder.Append(Items[i]);
-                if (i < count - 1)
+                if (i < Count - 1)
                 {
                     builder.Append(',');
                 }

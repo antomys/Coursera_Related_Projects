@@ -8,38 +8,29 @@ namespace Exercise2
     public class OrderedDynamicArray<T> : DynamicArray<T> where T:IComparable
     {
         /// <summary>
-        /// Constructor
-        /// </summary>
-        public OrderedDynamicArray()
-            : base()
-        {
-            
-        }
-        
-        /// <summary>
         /// Adds the given item to the IntDynamicArray
         /// </summary>
         /// <param name="item">the item to add</param>
         public override void Add(T item)
         {
             // expand array if necessary
-            if (count == Items.Length)
+            if (Count == Items.Length)
             {
                 Expand();
             }
 
             // find location at which to add the item
             var addLocation = 0;
-            while ((addLocation < count) &&
+            while ((addLocation < Count) &&
                 (Items[addLocation].CompareTo(item) < 0))
             {
                 addLocation++;
             }
 
-            // shift array, add new item and increment count
+            // shift array, add new item and increment Count
             ShiftUp(addLocation);
             Items[addLocation] = item;
-            count++;
+            Count++;
         }
 
         /// <summary>
@@ -56,9 +47,9 @@ namespace Exercise2
                 return false;
             }
 
-            // shift all the elements above the removed one down and change count
+            // shift all the elements above the removed one down and change Count
             ShiftDown(itemLocation + 1);
-            count--;
+            Count--;
             return true;
         }
 
@@ -70,7 +61,7 @@ namespace Exercise2
         public override int IndexOf(T item)
         {
             var lowerBound = 0;
-            var upperBound = count - 1;
+            var upperBound = Count - 1;
             var location = -1;
 
             // second part of Boolean expression added from defect discussed in reading
@@ -106,7 +97,7 @@ namespace Exercise2
         /// <param name="index">the index at which to start shifting up</param>
         private void ShiftUp(int index)
         {
-            for (var i = count; i > index; i--)
+            for (var i = Count; i > index; i--)
             {
                 Items[i] = Items[i - 1];
             }
@@ -118,7 +109,7 @@ namespace Exercise2
         /// <param name="index">the index at which to start shifting down</param>
         private void ShiftDown(int index)
         {
-            for (var i = index; i < count; i++)
+            for (var i = index; i < Count; i++)
             {
                 Items[i - 1] = Items[i];
             }
