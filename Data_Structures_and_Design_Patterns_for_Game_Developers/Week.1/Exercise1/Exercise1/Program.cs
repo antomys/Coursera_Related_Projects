@@ -9,7 +9,8 @@ namespace Exercise1
     /// </summary>
     internal static class MainClass
     {
-        private static int _firstNumber = 1;
+        private const int FirstNumber = 1;
+
         /// <summary>
         /// Tests LastIndexOf and AllIndexesOf methods
         /// </summary>
@@ -18,34 +19,34 @@ namespace Exercise1
             
             // build test dynamic array
             var testArray = new UnorderedIntDynamicArray();
-            testArray.Add(_firstNumber);
+            testArray.Add(FirstNumber);
             
             // test LastIndexOf with one item in dynamic array
-            Console.WriteLine(testArray.LastIndexOf(_firstNumber));
+            Console.WriteLine(testArray.LastIndexOf(FirstNumber));
             testArray.PopulateArray();
             
             // test LastIndexOf with multiple items in dynamic array
-            Console.WriteLine(testArray.LastIndexOf(_firstNumber));
+            Console.WriteLine(testArray.LastIndexOf(FirstNumber));
             
             // test LastIndexOf with item not in dynamic array
             testArray = new UnorderedIntDynamicArray();
-            Console.WriteLine(testArray.LastIndexOf(_firstNumber));
+            Console.WriteLine(testArray.LastIndexOf(FirstNumber));
             
             // test AllIndexesOf with one item in dynamic array
             testArray.Add(1);
-            var indexes = testArray.AllIndexOf(_firstNumber);
+            var indexes = testArray.AllIndexOf(FirstNumber);
             indexes.ShowIntArray();
             
             // test AllIndexesOf with multiple items in dynamic array
             Array.Clear(indexes,0,indexes.Length);
             testArray.PopulateArray();
-            indexes = testArray.AllIndexOf(_firstNumber);
+            indexes = testArray.AllIndexOf(FirstNumber);
             indexes.ShowIntArray();
             
             // test AllIndexesOf with item not in dynamic array
             Array.Clear(indexes,0,indexes.Length);
             testArray = new UnorderedIntDynamicArray();
-            indexes = testArray.AllIndexOf(_firstNumber);
+            indexes = testArray.AllIndexOf(FirstNumber);
             indexes.ShowIntArray();
 
             Console.WriteLine();
@@ -62,7 +63,7 @@ namespace Exercise1
         {
             for (var i = 0; i < 100; i++)
             {
-                if(i % 2 == 0) array.Add(_firstNumber);
+                if(i % 2 == 0) array.Add(FirstNumber);
                 array.Add(i);
             }
         }
