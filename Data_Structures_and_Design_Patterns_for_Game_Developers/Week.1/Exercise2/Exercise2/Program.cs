@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Exercise2
+﻿namespace Exercise2
 {
     /// <summary>
     /// Exercise 2 solution
@@ -12,7 +10,11 @@ namespace Exercise2
         /// </summary>
         public static void Main()
         {
-            Console.WriteLine();
+            var array = new OrderedDynamicArray<Rectangle>();
+            for (var i = 0.1f; i <= 100; i++)
+                array.Add(new Rectangle(i, i));
+            
+            array.Print();
         }
     }
 }

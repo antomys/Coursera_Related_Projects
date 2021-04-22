@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 
 namespace Exercise2
 {
@@ -53,6 +54,12 @@ namespace Exercise2
                 }
             }
             return builder.ToString();
+        }
+
+        public void Print()
+        {
+            foreach(var obj in Items)
+                Console.WriteLine(obj.ToString());
         }
         
         /// <summary>
